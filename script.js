@@ -140,3 +140,206 @@
 // }
 
 // wholeNumber(22,2)
+
+//Уровень 1.4 задачника JavaScript
+//Выведите в консоль все целые числа от 1 до 100.
+// const number =(num)=>{
+//     for (let i = 0; i < num; i++) {
+//         console.log(element)
+//     }
+// }
+// number(100)
+
+//Выведите в консоль все целые числа от -100 до 0.
+
+// const negativeNumber = (num) => {
+//     for (let i = num; i <= 0; i++) {
+//         console.log(i)
+//     }
+// }
+
+// negativeNumber(-100)
+
+//Выведите в консоль все целые числа от 100 до 1.
+
+// const wholeNumbers = (num) => {
+//     for (let i = num; i >= 0; i--) {
+//         console.log(i)
+//     }
+// }
+
+// wholeNumbers(100)
+
+//Выведите в консоль все четные числа из промежутка от 1 до 100.
+
+// const evenNumbers = (num) => {
+//     for (let i = 1; i <= num; i++) {
+//         if (i % 2 === 0) {
+//             console.log(i)
+//         }
+//     }
+// }
+
+// evenNumbers(100)
+
+
+//Выведите в консоль все числа кратные трем в промежутке от 1 до 100.
+
+// const threeNumbers = (num) => {
+//     for (let i = 0; i <= num; i++) {
+//         if (i % 3 === 0) {
+//             console.log(i)
+//         }
+//     }
+// }
+// threeNumbers(100)
+
+//Уровень 1.5 задачника JavaScript
+
+//Найдите сумму всех целых чисел от 1 до 100.
+
+// const sumNumbers = (num) => {
+//     let sum = 0
+//     for (let i = 0; i <= num; i++) {
+//         sum += i
+//         console.log(sum)
+//     }
+// }
+
+// sumNumbers(100)
+
+//Найдите сумму всех целых четных чисел в промежутке от 1 до 100.
+// const Number = (num) => {
+//     let sum = 0
+//     for (let i = 0; i <= num; i++) {
+//         if (i % 2 === 0) {
+//             sum += i
+//         }
+//     }
+// console.log(sum)
+// }
+
+// Number(100)
+
+//Найдите сумму всех целых нечетных чисел в промежутке от 1 до 100.
+// const eventNumber = (num) => {
+//     let sum = 0
+//     for (let i = 0; i <= num; i++) {
+//         if (i % 3 === 0) {
+//             sum += i
+//         }
+//     }
+// console.log(sum)
+// }
+
+// eventNumber(100)
+
+//Даны два целых числа. Найдите остаток от деления первого числа на второе.
+
+// const remainsNumbers = (oneNum, twoNum) => {
+// console.log(oneNum % twoNum)
+// }
+
+// remainsNumbers(12,5)
+
+//Дана некоторая строка. Переберите и выведите в консоль по очереди все символы с конца строки.
+
+
+// const stringArrey = (str) => {
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         console.log(str.charAt(i))
+
+//     }
+// }
+
+// stringArrey('привет богдан')
+
+//Уровень 1.6 задачника JavaScript
+
+//Дан массив с числами. Найдите сумму квадратов элементов этого массива.
+
+// const arrySum = (arr) => {
+//     const sum = arr.reduce((acc, item) => {
+//         return acc + item * item
+//     }, 0)
+//     console.log(sum)
+// }
+
+// arrySum([1, 2, 3, 4])
+
+//Дан массив с числами. Найдите сумму квадратных корней элементов этого массива.
+
+// const arrThroy = (arr) => {
+//     let sum = 0
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += Math.sqrt(arr[i]) вычисляет квадратный корень 
+
+//     }
+//     console.log(sum)
+// }
+
+// arrThroy([1, 2, 3, 4])
+
+//Дан массив с числами. Найдите сумму положительных элементов этого массива.
+
+
+// const sumArray = (arr) => {
+// let sum = 0
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//         sum += arr[i]
+//     }
+// } решение через цикл
+// let result = arr.filter((item)=> item > 0).reduce((acc,item)=>{
+//     return acc + item
+// },0) решение через filter и reduce
+//     console.log(result)
+
+
+// }
+// sumArray([-1, 2, -3, 4])
+
+//Дан массив с числами. Найдите сумму тех элементов этого массива, которые больше нуля и меньше десяти.
+
+// const arrSum = (arr) => {
+//     let result = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] > 0 && arr[i] < 10) {
+//         result += arr[i];
+//       }
+//     }
+//     const result = arr.filter((item) => item >= 0 && item <= 10).reduce((acc,item)=>{
+//         return acc + item
+//     },0)
+//     console.log(result)
+// }
+
+// arrSum([20, -5, 5, -2, 4, 30])
+
+//Уровень 1.7 задачника JavaScript
+//Получите массив букв этой строки.
+// 'abcde'
+
+// const arrString = (str) => {
+// const result = str.split('')
+// console.log(result)
+// }
+// arrString('abcde')
+
+//Получите массив цифр этого числа.
+//12345
+
+// const arrNumber=(num)=>{
+//     const result = num.toString().split('')
+//     console.log(result)
+// }
+
+// arrNumber(12345)
+
+//Дано некоторое число:12345Переверните его:
+
+// const reversNumber = (num) => {
+//     const result = Number(num.toString().split('').reverse().join(''))
+//     console.log(result)
+// }
+// reversNumber(12345)
