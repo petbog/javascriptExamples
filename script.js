@@ -343,3 +343,85 @@
 //     console.log(result)
 // }
 // reversNumber(12345)
+
+//Дано некоторое число:
+// 12345
+// Найдите сумму цифр этого числа.
+
+// const sumNumbers = (num) => {
+//     const result = num.toString().split('').reduce((acc,item)=>{
+//             return acc + parseInt(item)
+//         },0)
+//     console.log(result)
+
+// }
+// sumNumbers(12345)
+
+//Уровень 1.8 задачника JavaScript
+//Заполните массив целыми числами от 1 до 10.
+
+// const arrNumbers=(num)=>{
+//     const arr =[]
+//     for (let i = 1 ; i < num ; i++) {
+//         arr.push(i)
+//     }
+//     console.log(arr)
+// }
+// arrNumbers(10)
+
+//Заполните массив четными числами из промежутка от 1 до 100.
+
+// const eventNumbers = (num) => {
+//     const arr = []
+//     for (let i = 0; i < num; i++) {
+//         if (i % 2 === 0) {
+//             arr.push(i)
+//         }
+//     }
+//     console.log(arr)
+// }
+
+// eventNumbers(100)
+
+//Дан массив с дробями:
+
+// [1.456, 2.125, 3.32, 4.1, 5.34]
+// Округлите эти дроби до одного знака в дробной части.
+
+// const fractionNumbers=(arr)=>{
+//     const result = arr.reduce((acc,item)=>{
+//         return acc + Math.round(item)
+//     },[])
+//     console.log(result)
+// }
+// fractionNumbers([1.456, 2.125, 3.32, 4.1, 5.34])
+
+//Уровень 1.9 задачника JavaScript
+//Дан массив со строками. Оставьте в этом массиве только те строки, которые начинаются на http://.
+
+// const arrString=(arr)=>{
+// const result = arr.filter((item)=> item.startsWith('http://'))
+// console.log(result)
+// }
+// arrString(['http://5954984','asdasd'])
+
+//Дан массив со строками. Оставьте в этом массиве только те строки, которые заканчиваются на .html.
+
+// const endString = (arr) => {
+// const result = arr.filter((item)=>item.endsWith('.html'))
+// console.log(result)
+// }
+
+// endString(['dsadasdasd.html','asdasdasd'])
+
+//Дан массив с числами. Увеличьте каждое число из массива на 10 процентов.
+
+// const interestArray = (arr) => {
+//     const interest = 1.1
+//     const result = arr.map(item=> item * interest)
+//     console.log(result)
+// }
+
+// interestArray([5,6])
+
+//Уровень 1.10 задачника JavaScript
