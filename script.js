@@ -425,3 +425,63 @@
 // interestArray([5,6])
 
 //Уровень 1.10 задачника JavaScript
+//заполните массив случайными числами из промежутка от 1 до 100.
+
+// const randomNumber = (max) => {
+//     const arr = []
+//     for (let i = 0; i <= 10; i++) {
+//         arr.push(Math.round(Math.random() * max))
+//     }
+//     console.log(arr)
+// }
+// randomNumber(100)
+
+//Дано некоторое число:
+
+// 12345
+// Выведите в консоль все его символы с конца.
+
+// const reversNumber = (num) => {
+//     const result = parseInt(num.toString().split('').reverse().join(''))
+//     console.log(result)
+// }
+// reversNumber(12345)
+
+
+// Дан некоторый массив, например, вот такой:
+
+// [1, 2, 3, 4, 5, 6]
+// По очереди выведите в консоль подмассивы из двух элементов нашего массива:
+
+// [1, 2]
+// [3, 4]
+// [5, 6]
+
+// const droppArray = (arr) => {
+//     const newArr = []
+//     const size = 2
+//     for (let i = 0; i <Math.ceil(arr.length/size); i++) {
+//         newArr[i] = arr.slice((i*size), (i*size) + size);
+
+//     }
+//     console.log(newArr)
+// }
+
+// droppArray([1, 2, 3, 4, 5, 6])
+
+
+// Даны два массива:
+
+// let arr1 = [1, 2, 3];
+// let arr2 = [4, 5, 6];
+// Слейте эти массивы в новый массив:
+
+// [1, 2, 3, 4, 5, 6]
+
+// const newArr = (oneArr, twoArr) => {
+//     const result = oneArr.concat(twoArr)
+//     // const result = [...oneArr, ...twoArr]
+//     console.log(result)
+// }
+// newArr([1, 2, 3],[4, 5, 6])
+
