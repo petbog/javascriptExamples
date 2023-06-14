@@ -167,3 +167,151 @@
 // values(user)
 
 //Дано число. Выведите в консоль количество четных цифр в этом числе.
+
+// const eventNumber = (num) => {
+//     const arr = []
+//     for (let i = 0; i <= num; i++) {
+//         if (i % 2 === 0) {
+//             arr.push(i)
+//         }
+//     }
+//     const newArr = arr.filter(item => item < 20)
+//     console.log(newArr)
+// }
+// eventNumber(50)
+
+// Дана некоторая строка:
+
+// 'abcde'
+// Переведите в верхний регистр все нечетные буквы этой строки. В нашем случае должно получится следующее:
+
+// 'AbCdE'
+
+// const apperString = (str) => {
+//     console.log(str.toUpperCase())
+// }
+// apperString('abcde')
+
+// Дана некоторая строка со словами:
+
+// 'aaa bbb ccc'
+// Сделайте заглавным первый символ каждого слова в этой строке. В нашем случае должно получится следующее:
+
+// 'Aaa Bbb Ccc'
+
+// const indexString = (str) => {
+//     const arr1 = str.slice(0, 3).split(' ').toString()
+//     let newStr = arr1[0].toUpperCase() + arr1.slice(1)
+//     let finich1=newStr.split(' ')
+//     const arr2 = str.slice(4, 7).split(' ').toString()
+//     let newStr2 = arr2[0].toUpperCase() + arr2.slice(1)
+//     let finich2=newStr2.split(' ')
+//     const arr3 = str.slice(8, 11).split(' ').toString()
+//     let newStr3 = arr3[0].toUpperCase() + arr3.slice(1)
+//     let finich3=newStr3.split(' ')
+//     const newArr=finich1.concat(finich2,finich3)
+//     console.log(newArr)
+// }
+// indexString('aaa bbb ccc')
+
+// const indexString = (str) => {
+//     let arr = str.split(' ')
+//     for (let i = 0; i < arr.length; i++) {
+//         arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1)
+//     }
+//     let newArr = arr.join(' ')
+//     console.log(newArr)
+// }
+// indexString('aaa bbb ccc')
+
+//Уровень 2.5 задачника JavaScript
+// Дана некоторая строка, например, вот такая:
+
+// '023m0df0dfg0'
+// Получите массив позиций всех нулей в этой в строке.
+
+// const indexString=(str)=>{
+//     const arr=[]
+//     for (let i = 0; i < str.length; i++) {
+//         if(str[i] === '0'){
+//             arr.push(i)
+//         }
+//     }
+//     console.log(arr)
+// }
+
+// indexString('023m0df0dfg0')
+
+// Дана некоторая строка:
+
+// 'abcdefg'
+// Удалите из этой строки каждый третий символ. В нашем случае должно получится следующее:
+
+// 'abdeg'
+
+// const deleteIndex = (str) => {
+//     let newStr = ''
+//     for (let i = 0; i < str.length; i++) {
+//         if ((i + 1) % 3 !== 0) {
+//             newStr +=str[i]
+//       }
+//     }
+//     console.log(newStr)
+// }
+// deleteIndex('abcdefg')
+
+// Дан некоторый массив, например, вот такой:
+
+// [1, 2, 3, 4, 5, 6]
+// Поделите сумму элементов, стоящих на четных позициях, на сумму элементов, стоящих на нечетных позициях.
+
+// const newArr = (arr) => {
+//     const oneArr = []
+//     const twoArr = []
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 === 0) {
+//             oneArr.push(arr[i])
+//         } else {
+//             if (arr[i] % 2 !== 0) {
+//                 twoArr.push(arr[i])
+//             }
+//         }
+//     }
+//     const newArr = oneArr.map((el,i)=> Math.round(el / twoArr[i])) 
+//     console.log(newArr)
+// }
+// newArr([1, 2, 3, 4, 5, 6])
+
+//Уровень 2.6 задачника JavaScript
+//Дана некоторая строка с буквами и цифрами. Получите массив позиций всех цифр из этой строки
+
+// const indexString = (str) => {
+//     const arr = []
+//     for (let i = 0; i < str.length; i++) {
+//         if (!isNaN(str[i])) {
+//             arr.push(i)
+//         }
+//     }
+//     console.log(arr)
+// }
+
+// indexString('123ddd123')
+
+// Дан массив с некоторыми числами, например, вот такой:
+
+// [123, 456, 789]
+// Напишите код, который перевернет числа в этом массиве по следующему принципу:
+
+// [321, 654, 987]
+
+const reversArrey = (arr) => {
+    const result = arr.map(num => num.toString().split('').reverse().join(''))
+    console.log(result)
+}
+reversArrey([123, 456, 789])
+
+// const arr = [123, 456, 789];
+//  const reversedArr = arr.map(num => parseInt(num.toString().split('').reverse().join('')));
+//   console.log(reversedArr);
+  // [321, 654, 987]
