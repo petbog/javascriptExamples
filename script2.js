@@ -305,13 +305,65 @@
 
 // [321, 654, 987]
 
-const reversArrey = (arr) => {
-    const result = arr.map(num => num.toString().split('').reverse().join(''))
-    console.log(result)
-}
-reversArrey([123, 456, 789])
+// const reversArrey = (arr) => {
+//     const result = arr.map(num => num.toString().split('').reverse().join(''))
+//     console.log(result)
+// }
+// reversArrey([123, 456, 789])
 
 // const arr = [123, 456, 789];
 //  const reversedArr = arr.map(num => parseInt(num.toString().split('').reverse().join('')));
 //   console.log(reversedArr);
-  // [321, 654, 987]
+// [321, 654, 987]
+
+//   Дана некоторая строка с числом:
+
+// '1234567'
+// Отделите тройки цифр пробелами, начиная с конца числа. В нашем случае должно получится следующее:
+
+// '1 234 567'
+
+// const replaceStrin = (str) => {
+//   const result = str.replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+//   console.log(result)
+// }
+// replaceStrin('1234567')
+
+// Дана некоторая строка:
+
+// 'AbCdE'
+// Смените регистр букв этой строки на противоположный. В нашем случае должно получится следующее:
+
+// 'aBcDe'
+
+// const caseString = (str) => {
+//   let newStr = ''
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] == str[i].toLowerCase()) {
+//       newStr += str[i].toUpperCase()
+//     } else {
+//       if (str[i] == str[i].toUpperCase()) {
+//         newStr += str[i].toLowerCase()
+//       }
+//     }
+//   }
+//   return newStr;
+// }
+// console.log(caseString('AbCdE'))
+
+// Дан некоторый массив с числами, например, вот такой:
+
+// [1, 2, 3, 4, 5, 6]
+// Слейте пары элементов вместе:
+
+// [12, 34, 56]
+
+// const arreySort = (arr) => {
+//   const newArr = []
+//   for (let i = 0; i < arr.length; i += 2) {
+//     newArr.push(`${arr[i]}${arr[i + 1]}`)
+//   }
+
+//   return newArr
+// }
+// console.log(arreySort([1, 2, 3, 4, 5, 6]))
