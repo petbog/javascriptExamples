@@ -367,3 +367,87 @@
 //   return newArr
 // }
 // console.log(arreySort([1, 2, 3, 4, 5, 6]))
+
+// Дана некоторая строка со словами:
+
+// 'aaa bbb ccc eee fff'
+// Сделайте заглавным первый символ каждого второго слова в этой строке. В нашем случае должно получится следующее:
+
+// 'aaa Bbb ccc Eee fff'
+
+// const stringbig = (str) => {
+//     const newStr = str.split(' ')
+//     for (let i = 1; i < newStr.length; i += 2) {
+//         newStr[i] = newStr[i][0].toUpperCase() + newStr[i].substring(1)
+//     }
+
+//     console.log(newStr.join(''))
+// }
+
+// console.log(stringbig('aaa bbb ccc eee fff'))
+// 'a bc def ghij'
+// Переведите в верхний регистр все подстроки, в которых количество букв меньше или равно трем. В нашем случае должно получится следующее:
+
+// 'A BC DEF ghij'
+
+// const strUpperCase = (str) => {
+//     let newStr = str.split(' ')
+//     for (let i = 0; i < newStr.length; i ++) {
+//         if(newStr[i].length <= 3){
+//             newStr[i]=newStr[i].toUpperCase()
+//         }
+
+//     }
+//     console.log(newStr)
+// }
+
+// strUpperCase('a bc def ghij')
+
+//Дан символ. Узнайте, в каком регистре этот символ - в верхнем или нижнем.
+
+// const strCase = (str) => {
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === str[i].toUpperCase()) {
+//             console.log('верхний регистр')
+//         } else  if (str[i] === str[i].toLowerCase()) {
+//                 console.log('нижний регистр')
+//             }
+//         }
+//     }
+
+
+// strCase('D')
+// Дано некоторое число, например, такое:
+
+// 123789
+// Удалите из этого числа все нечетные цифры. В нашем случае получится такой результат:
+
+// 28
+
+// const eventNumber = (number) => {
+//     let arr = []
+//     for (let i = 0; i < number.length; i++) {
+//         if (number[i] % 2 === 0) {
+//             arr.push(number[i])
+//         }
+//     }
+//     console.log(arr.join(''))
+// }
+// eventNumber('123789')
+
+//Дана строка с буквами. Проверьте, что в этой строке не более двух заглавных букв.
+
+// const strCase = (str) => {
+//     let count = 0
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === str[i].toUpperCase()) {
+//             count++
+//         }
+//     }
+//     if(count >= 2){
+//         console.log('больше')
+//     }else{
+//         console.log('меньше')
+//     }
+// }
+// strCase('ааа')
