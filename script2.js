@@ -451,3 +451,59 @@
 //     }
 // }
 // strCase('ааа')
+
+// Дана некоторая строка:
+
+// '1 22 333 4444 22 5555 1'
+// Удалите из этой строки все подстроки, в которых количество символов больше трех. В нашем случае должно получится следующее:
+
+// '1 22 333 22 1'
+
+// const deleteNumber = (str) => {
+//     const result =str.split(' ').filter((item)=> item.length <= 3).toString()
+//         console.log(result)
+// }
+// deleteNumber('1 22 333 4444 22 5555 1')
+
+// Даны два массива:
+
+// let arr1 = [1, 2, 3];
+// let arr2 = ['a', 'b', 'c'];
+// Слейте эти массивы в новый массив следующим образом:
+
+// [1, 2, 'a', 'b', 'c', 3]
+
+// const twoArr=(arr1,arr2)=>{
+//     const result=[...arr1.slice(0,2),...arr2,...arr1.slice(2)]
+//     console.log(result)
+// }
+// twoArr([1, 2, 3],['a', 'b', 'c'])
+
+//Уровень 2.9 задачника JavaScript
+
+// 123456
+// Найдите сумму пар цифр этого числа. В нашем случае имеется ввиду следующее:
+
+// 12 + 34 + 56
+
+// const sumNumbers = (num) => {
+//     const num1 = Number(num.toString().split('').slice(0, 2).reduce((acc, item) => acc + item, []))
+//     const num2 = Number(num.toString().split('').slice(2, 4).reduce((acc, item) => acc + item, []))
+//     const num3 = Number(num.toString().split('').slice(4, 6).reduce((acc, item) => acc + item, []))
+//     let result = num1 + num2 + num3
+//     console.log(result)
+// }
+// sumNumbers(123456)
+
+// Дан массив с числами:
+
+// [1, 2, 3, 4, 5]
+// Выведите в консоль элементы этого массива в обратном порядке.
+
+const reversArr = (arr) => {
+    const result = arr.reverse()
+    console.log(result)
+
+}
+
+reversArr([1, 2, 3, 4, 5])
