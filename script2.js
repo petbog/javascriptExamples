@@ -500,10 +500,79 @@
 // [1, 2, 3, 4, 5]
 // Выведите в консоль элементы этого массива в обратном порядке.
 
-const reversArr = (arr) => {
-    const result = arr.reverse()
-    console.log(result)
+// const reversArr = (arr) => {
+//     const result = arr.reverse()
+//     console.log(result)
 
-}
+// }
 
-reversArr([1, 2, 3, 4, 5])
+// reversArr([1, 2, 3, 4, 5])
+
+
+//Дана строка с буквами и цифрами. Проверьте, что в этой строке не более трех букв.
+
+// const stringTriger = (str) => {
+//     let count = 0
+//     const letters=/[a-zA-Z]/
+//     for (let i = 0; i < str.length; i++) {
+//         if (letters.test(str[i])) {
+//             count++
+//         }
+//     }
+//     if(count >= 3){
+//         console.log('больше')
+//     }
+// }
+// stringTriger('dsfdsaff1263')
+
+//Дано число. Получите первую четную цифру с конца этого числа.
+
+// const reversNumber = (num) => {
+//     const arr = []
+//     const result = num.toString().split('').reverse()
+//     for (let i = 0; i < result.length; i++) {
+//         if (result[i] % 2 === 0) {
+//             arr.push(result[i])
+//         }
+//     }
+//     console.log(arr.slice(0,1))
+// }
+// reversNumber(28)
+
+// Дана некоторая строка:
+
+// 'abcde abcde abcde'
+// Замените в ней первый символ каждого слова на '!':
+
+// '!bcde !bcde !bcde'
+
+//разобраться
+// const stringКeplacement = (str) => {
+//     let replace = ''
+//     for (let i = 0; i < str.length; i++) {
+//         if (i === 0 || str[i - 1] === ' ') {
+//             replace += '!'
+//         } else {
+//             replace +=str[i]
+//         }
+
+//     }
+//     console.log(replace)
+// }
+// stringКeplacement('abcde abcde abcde')
+
+// Дан массив с числами:
+
+// [1, 2, 3, 3, 4, 5]
+// Проверьте, что в этом массиве есть два одинаковых элемента подряд.
+
+// const cloneNumbers = (arr) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i - 1] === arr[i]){
+//             console.log(arr[i])
+//         }
+
+//     }
+// }
+
+// cloneNumbers([1, 2, 3, 3, 4, 5])
