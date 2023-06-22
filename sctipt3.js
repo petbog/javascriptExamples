@@ -607,26 +607,215 @@
 // ];
 // Найдите сумму элементов этой структуры.
 
-const summObj = (arr) => {
-    const result = Object.values(arr)
-        .map(item => Object.values(item).reduce((acc, value) => acc + value.reduce((acc, item) => acc + item, 0),0)).reduce((acc,item)=>acc+item,0)
-    console.log(result)
-}
-summObj([
-    {
-        1: [1, 2, 3],
-        2: [1, 2, 3],
-        3: [1, 2, 3],
-    },
-    {
-        1: [1, 2, 3],
-        2: [1, 2, 3],
-        3: [1, 2, 3],
-    },
-    {
-        1: [1, 2, 3],
-        2: [1, 2, 3],
-        3: [1, 2, 3],
-    },
-])
-console.error('повторить')
+// const summObj = (arr) => {
+// const result = Object.values(arr)
+//     .map(item => Object.values(item).reduce((acc, value) => acc + value.reduce((acc, item) => acc + item, 0),0)).reduce((acc,item)=>acc+item,0)
+// console.log(result)
+
+//     const result = Object.values(arr)
+//         .map((item) => Object.values(item).reduce((acc, item) => acc + item.reduce((acc, item) => acc + item, 0), 0))
+//         .reduce((acc, item) => acc + item,0)
+//     console.log(result)
+// }
+// summObj([
+//     {
+//         1: [1, 2, 3],
+//         2: [1, 2, 3],
+//         3: [1, 2, 3],
+//     },
+//     {
+//         1: [1, 2, 3],
+//         2: [1, 2, 3],
+//         3: [1, 2, 3],
+//     },
+//     {
+//         1: [1, 2, 3],
+//         2: [1, 2, 3],
+//         3: [1, 2, 3],
+//     },
+// ])
+
+//Уровень 3.8 задачника JavaScript
+//Дан массив со числами. Проверьте, что все числа из этого массива содержат в себе цифру 3.
+
+// const friiArr = (arr) => {
+//     const result = arr.map(item => item.toString().includes('3'))
+//     console.log(result)
+// }
+// friiArr([13,3,23,33])
+
+// Дана строка в формате:
+
+// 'kebab-case'
+// Преобразуйте ее в формат:
+
+// 'snake_case'
+
+// const strReplace = (str) => {
+//         const result = str.replace('kebab-','snake_')
+//         console.log(result)
+// }
+
+// strReplace('kebab-case')
+
+// Дана строка в формате:
+
+// 'snake_case'
+// Преобразуйте ее в формат:
+
+// 'camelCase'
+
+// const strReplace = (str) => {
+//         const result = str.replace('snake_c','camelC')
+//         console.log(result)
+// }
+
+// strReplace('snake_case')
+
+// Дана строка в формате:
+
+// 'camelCase'
+// Преобразуйте ее в формат:
+
+// 'snake_case'
+
+// const strReplace = (str) => {
+//         const result = str.replace('camelC','snake_c')
+//         console.log(result)
+// }
+// strReplace('camelCase')
+
+// Сформируйте с помощью циклов следующий массив:
+
+// [
+// 	[1, 2, 3],
+// 	[1, 2, 3],
+// 	[1, 2, 3],
+// 	[1, 2, 3],
+// 	[1, 2, 3],
+// ]
+// const newArr = (num) => {
+//     const arr = []
+//     for (let i = 0; i <= num; i++) {
+//         arr.push([1, 2, 3])
+//     }
+//     console.log(arr)
+// }
+// newArr(2)
+//Уровень 3.9 задачника JavaScript
+//Дана строка. Проверьте, что эта строка состоит только из цифр.
+
+// const isNumber = (str) => {
+//         const result = parseInt(str)
+//         const resultTotal = Number.isInteger(result)
+//         if(resultTotal === true){
+//             console.log('эта строка число')
+//         }else{
+//             console.log('эта строка не число') 
+//         }
+// }
+// неправиль из за parseInt 
+// const isNumber = (str) => {
+//     const regex = /^\d+$/; // регулярное выражение для проверки наличия только цифр
+//     if(regex.test(str)){
+//     console.log('Эта строка число');
+//     } else {
+//     console.log('Эта строка не число');
+//     }
+//     }
+
+// isNumber('12м3456')
+
+//Дана строка. Проверьте, что эта строка состоит только из четных цифр.
+
+// const evenNumber = (str) => {
+//     const result = str.split('').filter((item)=> item % 2 === 0)
+//     console.log(result)
+// }
+
+// evenNumber('1246')
+
+//Дан массив со числами. Удалите из него числа, имеющие два и более нуля.
+
+// const arrNull = (arr) => {
+//     const result = arr.filter(item => item.toString().split('0').length -1 < 2  )
+//     console.log(result)
+// }
+// arrNull([10,100,1000,10000])
+
+//Найдите все числа от 1 до 1000, сумма цифр которых равна 13.
+
+// const numberArr = (max) => {
+//     const arr = []
+//     for (let i = 1; i <= max; i++) {
+//         if (i % 13 === 0) {
+//             arr.push(i)
+//         }
+//     }
+//     console.log(arr)
+// }
+// numberArr(1000)
+
+// формируйте с помощью циклов следующий массив:
+
+// [
+// 	[1, 2, 3],
+// 	[4, 5, 6],
+// 	[7, 8, 9],
+// ]
+
+// const newArr = () => {
+//     const arr = []
+//     let count = 1
+//     for (let i = 0; i < 3; i++) {
+//         arr[i] = []
+//         for (let j = 0; j < 3; j++) {
+//             arr[i][j] = count
+//             count++
+//         }
+//     }
+//     console.log(arr)
+// }
+// newArr()
+
+//Уровень 3.10 задачника JavaScript
+//Dан массив. Сделайте так, чтобы в нем каждый элемент повторился два раза.
+
+// const cloneNumberArr = (arr) => {
+//     const newArr = []
+//     for (let i = 0; i < arr.length; i++) {
+//         newArr.push(arr[i], arr[i])
+//     }
+//     console.log(newArr)
+// }
+// cloneNumberArr([1, 2, 3, 4])
+
+// const cloneNumberArr = (arr) => {
+//     const newArr = arr.map(item => [item,item]).flat()
+
+//     console.log(newArr)
+// }
+// cloneNumberArr([1, 2, 3, 4])
+
+//Дан массив и число. Оставьте в массиве только те числа, которые являются делителями заданного числа.
+
+// const arrReset=(arr,num)=>{
+//     const resulr =arr.filter((item) => item % num === 0)
+//     console.log(resulr)
+// }
+// arrReset([1,2,3,4,5],2)
+
+//Даны два числа. Получите массив цифр, которые есть и в одном, и во втором числе.
+
+// const arrNumber = (num1, num2) => {
+//     const arr1 = [...num1.toString()].map(Number)
+//     const arr2 = [...num2.toString()].map(Number)
+//     const result1 = new Set(arr1)
+//     const result2 = new Set(arr2)
+//     const totalResult=[...result1].filter((item) => result2.has(item))
+//     const total = [...totalResult]
+    
+//     console.log(total)
+// }
+// arrNumber(1234, 2345)
+console.warn('разобраться подробней')
