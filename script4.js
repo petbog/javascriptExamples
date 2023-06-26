@@ -67,9 +67,78 @@
 
 //Сделайте функцию, которая параметром будет принимать число и удалять из него нули.
 
-const deleteNull = (num) => {
-    const result = num.toString().split('').filter((item) => item !== '0')
-    const totalResult = Number(result)
-    console.log(totalResult)
+// const deleteNull = (num) => {
+//     const result = num.toString().split('').filter((item) => item !== '0')
+//     const totalResult = Number(result.join(''))
+//     console.log(totalResult)
+// }
+// deleteNull(2030)
+
+//Сделайте функцию, которая будет возвращать сколько дней прошло или осталось до заданной даты в году, в зависимости от того, была уже эта дата или нет.
+
+// const removeDate = (year, month, day) => {
+//     //получение текущей даты
+//     const date = new Date()
+//     //получение даты из парамметров
+//     const targetDate = new Date(year, month - 1, day)
+//     //вычисление даты в миллисекундах
+//     const currentDate = date.getTime() - targetDate.getTime()
+//     //округление миллисекунд до дней 
+//     const differenceInDays = Math.ceil(currentDate / (1000 * 3600 * 24));
+//     if (date.getTime() > targetDate.getTime()) {
+//         console.log(`${differenceInDays} прошло дней `)
+//     } else {
+//         console.log(`${differenceInDays} осталось дней `)
+//     }
+// }
+// removeDate(2023, 6, 23)
+
+//Сделайте функцию, которая параметром будет год и проверять, високосный он или нет.
+
+// const leapYear = (num) => {
+//     if (num % 4 === 0) {
+//         console.log(`${num} високостный`)
+//     } else {
+//         console.log(`${num} не високостный`)
+//     }
+// }
+// leapYear(1996)
+
+//Сделайте функцию, которая вернет массив всех високосных годов за предыдущие сто лет.
+
+// const leapYear = (min, max) => {
+//     const arr = []
+//     for (let i = min; i <= max; i++) {
+//         if (i % 4 === 0) {
+//             arr.push(i)
+//         }
+//     }
+//     console.log(arr)
+// }
+// leapYear(1900,2000)
+
+//Сделайте функцию, которая будет возвращать сколько дней осталось до конца текущего месяца
+// const monthDay = () => {
+//     const today = new Date()
+//     const lastMonthDay = new Date(today.getFullYear(), today.getMonth() + 1, 0)
+//     const currentDay=Math.ceil((lastMonthDay - today) /(1000 * 3600 * 24))
+//     console.log(`${currentDay} осталось`)
+// }
+// monthDay()
+
+// Сделайте функцию, которая вернет предыдущий, текущий и следующий дни недели словом в виде следующего объекта:
+
+// {
+// 	next: 'пн',
+// 	curr: 'вс',
+// 	prev: 'сб',
+// }
+
+const objDay=(obj)=>{
+    console.log(`${obj.next} будущий день ${obj.curr}  настоящий день ${obj.prev}  предыдущий день`)
 }
-deleteNull(2030)
+objDay({
+	next: 'пн',
+	curr: 'вс',
+	prev: 'сб',
+})

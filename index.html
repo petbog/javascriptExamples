@@ -32,6 +32,10 @@
     Number.isInteger-проверка строки на число возвращает булевое значение <br>
     new Set= создает новый обьект без ключей <br>
     has= показывает существует ли в обьекте значение <br>
+    вычисление последнего дня в месяце<br>
+    const today = new Date()<br>
+    const lastMonthDay = new Date(today.getFullYear(), today.getMonth() + 1, 0)<br>
+    const currentDay=Math.ceil((lastMonthDay - today) /(1000 * 3600 * 24))<br>
 </body>
 <script src="./script.js"></script>
 <script src="./script2.js"></script>
