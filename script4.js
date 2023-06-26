@@ -134,11 +134,77 @@
 // 	prev: 'сб',
 // }
 
-const objDay=(obj)=>{
-    console.log(`${obj.next} будущий день ${obj.curr}  настоящий день ${obj.prev}  предыдущий день`)
-}
-objDay({
-	next: 'пн',
-	curr: 'вс',
-	prev: 'сб',
-})
+// const objDay=(obj)=>{
+//     console.log(`${obj.next} будущий день ${obj.curr}  настоящий день ${obj.prev}  предыдущий день`)
+// }
+// objDay({
+// 	next: 'пн',
+// 	curr: 'вс',
+// 	prev: 'сб',
+// })
+
+//Уровень 4.3 задачника JavaScript
+//Сделайте функцию, которая параметром будет принимать массив и удалять из него все дубли.
+
+// const cloneArr = (arr) => {
+// 	for (let i = 0; i < arr.length; i++) {
+// 		for (let j = i + 1; j < arr.length; j++) {
+// 			if (arr[i] === arr[j]) {
+// 				arr.splice(j, 1)
+// 				j--
+// 			}
+// 		}
+// 	}
+// 	return arr
+// }
+// console.log(cloneArr([1,1,2,3,3,4]))
+
+//Сделайте функцию, которая параметром будет принимать массив и удалять из него все дубли, которые встречаются больше трех раз.
+
+// const deleteCloneArr = (arr) => {
+// 	const result = arr.filter(item => {
+// 		const count = arr.reduce((acc, value) => {
+// 			if (value === item) {
+// 				acc++
+// 			}
+// 		}, 0)
+// 		return count <= 3
+// 	})
+// 	return result
+// }
+// console.log(deleteCloneArr([1, 1, 1, 2, 2, 3, 3, 3, 3]))
+
+//Сделайте функцию, которая параметром будет принимать массив и удалять из него одинаковые, рядом стоящие элементы.
+
+// const deleteCloneArr = (arr) => {
+// 	for (let i = 0; i < arr.length; i++) {
+// 		for (let j = i + 1; j < arr.length; j++) {
+// 			if (arr[i] === arr[j]) {
+// 				arr.splice(j, 1)
+// 				j--
+// 			}
+
+// 		}
+// 	}
+// 	return arr
+// }
+// console.log(deleteCloneArr([1,1,2,2,3,3]))
+
+//Сделайте функцию, которая параметром будет принимать массив с числами и возвращать максимальное 
+//и минимальное значение из этого массива в виде следующего объекта:
+
+// {
+// 	max: 9,
+// 	min: 1,
+// }
+
+// const arrMaxMin = (arr) => {
+// 	const obj = {};
+// 	obj.max = Math.max.apply(null, arr)
+// 	obj.min = Math.min.apply(null, arr)
+// 	console.log(obj)
+// }
+
+// arrMaxMin([1, 2, 3])
+
+//Уровень 4.4 задачника JavaScript
