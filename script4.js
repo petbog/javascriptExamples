@@ -208,3 +208,107 @@
 // arrMaxMin([1, 2, 3])
 
 //Уровень 4.4 задачника JavaScript
+//Сделайте функцию, которая параметром будет принимать число, а количество его делителей.
+
+// const numDell = (num, numDell) => {
+//     let count = 0
+//     for (let i = 0; i < num; i++) {
+//         if (num % i === 0){
+//             count++
+//         }
+//     }
+//     if(count === numDell){
+//         console.log('делитель подходит')
+//     }else{
+//         console.log('делитель не подходит')
+//     }
+// }
+// numDell(10,3)
+
+//Сделайте функцию, которая параметром будет принимать число, а возвращать массив его делителей.
+// const arrDel=(num)=>{
+//     const arr =[]
+//     for (let i = 0; i < num; i++) {
+//         if(num % i === 0){
+//             arr.push(num / i)
+//         }
+//     }
+//     console.log(arr)
+// }
+// arrDel(10)
+
+//лайте функцию, которая параметром будет принимать число и проверять, простое оно или нет.
+
+//делайте функцию, которая параметром будет принимать число и удалять из него четные цифры
+
+// const eventNum = (num) => {
+//     const result = num.toString().split('').filter((item) => {
+//         if(Number(item) % 2 !== 0){
+//             return item
+//         }
+//     } )
+//     const totalResult=Number(result.join(''))
+//     console.log(totalResult)
+// }
+// eventNum(123456)
+
+//Сделайте функцию, которая заполнит массив N случайными числами из заданного промежутка.
+
+// const randomArr = (length, max) => {
+//     const random = [...new Array(length)].map(() => Math.round(Math.random() * max))
+//     console.log(random)
+// }
+// randomArr(10,10)
+
+//Уровень 4.5 задачника JavaScript
+//Дана переменная со строкой. Проверьте, что в эта строка представляет собой число, то есть состоит только из цифр.
+
+// const numberString = (str) => {
+//     const result = !isNaN(str)
+//     console.log(result)
+// }
+// numberString('123456')
+
+//Дана переменная со строкой. Проверьте, что в эта строка представляет собой дробь.
+
+// const strDrob=(str)=>{
+//     if(!isNaN(parseFloat(str))){
+//         console.log('дровь')
+//     }else{
+//         console.log('не дробь')
+//     }
+// }
+// strDrob('3,14')
+
+//Сделайте функцию, которая параметром будет принимать массив с числами и возвращать второе по величине число.
+
+// const arrBig = (arr) => {
+//     const max = Math.max.apply(null, arr)
+//     const totalMax = arr.filter((item) => item !== max)
+//     const result=Math.max.apply(null,totalMax)
+//     console.log(result)
+// }
+// arrBig([2, 4, 5, 1, 3])
+
+//Сделайте функцию, которая параметрами будет принимать два числа и возвращать массив, 
+//заполненный целыми числами от минимального параметра до максимального.
+
+// const randomNumArr = (max, min) => {
+//     const length = 10
+//     const arr = [...new Array(length)].map(() => Math.round(Math.random() * (max - min) + min))
+//     console.log(arr)
+// }
+// randomNumArr(1,20)
+
+//Сделайте функцию, которая заполнит массив случайными латинскими буквами.
+
+// const arrStr = (length) => {
+//     const result = []
+//     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+//     for (let i = 0; i < length; i++) {
+//       result.push( characters.charAt(Math.floor(Math.random() * characters.length))) 
+//     }
+//     console.log(result)
+// }
+// arrStr(10)
+//Сделайте функцию, которая будет возвращать сумму N первых чисел Фибоначчи.
