@@ -312,3 +312,162 @@
 // }
 // arrStr(10)
 //Сделайте функцию, которая будет возвращать сумму N первых чисел Фибоначчи.
+// const fib = (num) => {
+//     const arrFib = [0, 1]
+//     for (let i = 2; i <= num; i++) {
+//         const num1 = arrFib[i - 1]
+//         const num2 = arrFib[i - 2]
+//         arrFib.push(num1 + num2)
+//     }
+//     return arrFib[num]
+// }
+// console.log(fib(6))
+
+//Уровень 4.6 задачника JavaScript
+//Сделайте функцию, которая параметром будет принимать дату в формате год-месяц-день,
+// и определять, существует ли такая дата или нет.
+
+// const fakeDate = (year, month, day) => {
+//     const date = new Date(year, month - 1, day)
+//     if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day) {
+//         console.log('такой даты нет')
+//     } else {
+//         console.log('такая дата есть')
+//     }
+// }
+// fakeDate(2023,6,28)
+
+//Сделайте функцию, которая сгенерирует строку заданной длины, заполненную случайными латинскими буквами.
+
+// const randomString = (length) => {
+//     const arr = []
+//     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+//     for (let i = 0; i <= length; i++) {
+//         arr.push(characters.charAt(Math.floor(Math.random() * characters.length)))
+//     }
+//     const totalResult=arr.join(' ')
+// console.log(totalResult)
+// }
+
+// randomString(10)
+
+//Сделайте функцию, которая параметром будет получать строку со словами, 
+//а возвращать строку в верхнем регистре, состоящую из первых букв слов.
+
+// const topRegisterString = (str) => {
+//     const result = str.split(' ').map((item) => item.charAt(0).toUpperCase() + item.slice(1))
+//     const totalResult=result.join(' ')
+//     console.log(totalResult)
+// }
+// topRegisterString('просто здравствуй просто как дела')
+
+//Сделайте функцию, которая параметром будет принимать массив с числами и заменять каждое число на массив его делителей.
+
+// const arrDel = (arr) => {
+//     const res = []
+//     for (let i = 0; i <= arr.length; i++) {
+//         const resetArr = []
+//         for (let j = 1; j < arr[i]; j++) {
+//             if (arr[i] % j === 0) {
+//                 resetArr.push(j)
+//             }
+//         }
+//         res.push(resetArr)
+//     }
+//     console.log(res)
+// }
+// arrDel([2, 3, 4, 5, 6])
+
+// Сделайте функцию, которая параметром будет принимать секунды, 
+// а возвращать количество дней, часов, минут и секунд, соответствующих этим секундам, в виде следующего объекта:
+
+// {
+// d: 12,
+// h: 10,
+// m: 59,
+// s: 59,
+// }
+
+// const objClock = (sec) => {
+//     //вычисляю дни
+//     const day = Math.floor(sec / (24 * 60 * 60))
+//     sec -= day * 24 * 60 * 60
+//     //вычисляю часы
+//     const hour = Math.floor(sec / (60 * 60))
+//     sec -= hour * 60 * 60
+//     //вычисляю минуты
+//     const min = Math.floor(sec / 60)
+//     sec -= min * 60
+//     return {
+//         d: day,
+//         h: hour,
+//         m: min,
+//         s: sec,
+//     }
+// }
+// console.log(objClock(90055100))
+
+//Уровень 4.7 задачника JavaScript
+//Сделайте функцию, которая параметром будет принимать текст со словами, а возвращать текст, 
+//в котором эти слова будут отсортированы в алфавитном порядке.
+
+// const sortText=(str)=>{
+//     const res=str.split(' ').sort().join(' ')
+//     console.log(res)
+// }
+// sortText('бочка яхта арбуз вареник')
+
+//Сделайте функцию, которая параметром будет принимать два массива и возвращать массив их общих элементов.
+
+// const dubleArr = (arr1, arr2) => {
+//     const res = []
+//     for (let i = 0; i < arr1.length; i++) {
+//         for (let j = 0; j < arr2.length; j++) {
+//             if (arr1[i] === arr2[j]) {
+//                 res.push(arr1[i])
+//             }
+//         }
+//     }
+//     console.log(res)
+// }
+
+// dubleArr([1,2,3,4],[3,4,5,6])
+
+//Сделайте функцию, которая будет возвращать случайное число. Функция не должна возвращать одно и тоже число два раза подряд.
+// let prev = null
+
+// const randomNumber = () => {
+//     const min = 1;
+//     const max = 100;
+//     const result = Math.floor(Math.random() * (max - min + 1) + min)
+//     if (result === prev) {
+//         result = Math.floor(Math.random() * (max - min + 1) + min)
+//     }
+//     result === prev
+//     console.log(result)
+// }
+// randomNumber()
+
+// Сделайте функцию, которая параметром будет принимать массив и элемент и возвращать следующий за ним элемент. Смотрите пример:
+
+// let arr = [1, 2, 3, 4, 5];
+
+// func(arr, 1); // 2
+// func(arr, 4); // 5
+// func(arr, 5); // 1
+
+// const nextElArr = (arr, el) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === el) {
+//             if (i === arr.length - 1) {
+//                 return arr[0]
+//             } else {
+//                 return arr[i + 1]
+//             }
+//         }
+//     }
+// }
+// console.log(nextElArr([1, 2, 3, 4, 5], 4))
+
+//Уровень 4.8 задачника JavaScript
+//Сделайте функцию, которая параметром будет принимать массив и возвращать случайный элемент этого массива.
