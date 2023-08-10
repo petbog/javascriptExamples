@@ -471,3 +471,105 @@
 
 //Уровень 4.8 задачника JavaScript
 //Сделайте функцию, которая параметром будет принимать массив и возвращать случайный элемент этого массива.
+
+// const randomNumber=(arr)=>{
+//     const randonIndex=Math.floor(Math.random() * arr.length)
+//     return arr[randonIndex]
+// }
+
+// console.log(randomNumber([1,2,3,4,5,6]))
+
+//Сделайте функцию, которая параметром будет принимать массив и возвращать массив из N случайных элементов этого массива.
+
+// const ramdomElement = (array, N) => {
+//     let randomElements = [];
+//     if (N > array.length) {
+//         return randomElements;
+//     }
+//     for (let i = 0; i < N; i++) {
+//         let randomIndex = Math.floor(Math.random() * array.length);
+//         randomElements.push(array[randomIndex]);
+//         array.splice(randomIndex, 1);
+//         }
+
+//         return randomElements;
+// }
+// console.log(ramdomElement([1,2,3,4,5,6],2))
+
+//Сделайте функцию, которая параметром будет принимать массив и возвращать
+//  случайный элемент этого массива так, чтобы одинаковые элементы не возвращались два раза подряд.
+// let prevNum=[]
+// const randomNum = (arr) => {
+//     const randomIndex = Math.floor(Math.random() * arr.length)
+//     if(prevNum[prevNum.length -1] === arr[randomIndex]){
+//         return randomNum(arr)
+//     }else{
+//         prevNum.push(arr[randomIndex]);
+//         return arr[randomIndex];
+//     }
+// }
+// console.log(randomNum([1,2,3,4,5,6]))
+
+//Сделайте функцию, которая будет возвращать массив простых чисел из заданного промежутка.
+
+// function getPrimeNumbers(start, end) {
+//     if (start < 2 || end < 2 || start >= end) {
+//         return [];
+//     }
+//     var primeNumbers = [];
+//     for (var i = start; i <= end; i++) {
+//         if (isPrime(i)) {
+//             primeNumbers.push(i);
+//         }
+//     }
+//     return primeNumbers;
+// }
+// // Вспомогательная функция, которая проверяет, является ли число простым
+// function isPrime(number) {
+//     if (number < 2) {
+//         return false;
+//     }
+//     for (var i = 2; i <= Math.sqrt(number); i++) {
+//         if (number % i === 0) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// // Пример использования функции
+// var start = 1;
+// var end = 20;
+// var primeNumbers = getPrimeNumbers(start, end);
+
+// console.log(primeNumbers); 
+
+//Сделайте функцию, которая параметрами будет принимать любое количество чисел, а возвщать их сумму.
+
+// const sumNumbers = (...num) => {
+//     const result = num.reduce((acc, item) => acc + item, 0)
+//     console.log(result)
+// }
+// sumNumbers(5,10,20)
+
+//Сделайте функцию, которая будет возвращать случайный цвет.
+
+// const randomCollor = () => {
+//     const letters = '0123456789ABCDEF';
+//     let color = "#"
+//     for (let i = 0; i < 6; i++) {
+//         color += Math.floor(Math.random() * 16)
+//     }
+//     console.log(color)
+// }
+// randomCollor()
+
+
+//Сделайте функцию, которая параметром будет принимать двухмерный массив чисел и возвращать массив максимальных чисел в каждом подмассиве.
+
+// const maxNumber = (arr) => {
+//     const result = arr.map((item)=> Math.max(...item))
+//     console.log(result)
+
+// }
+// maxNumber([[1, 2, 3], [1, 2, 3]])
